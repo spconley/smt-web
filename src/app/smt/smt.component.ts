@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {SMTService} from '../smt.service';
 
 @Component({
   selector: 'app-smt',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SMTComponent implements OnInit {
 
-  constructor() { }
+  constructor(private smtService: SMTService) { }
 
   ngOnInit(): void {
   }
