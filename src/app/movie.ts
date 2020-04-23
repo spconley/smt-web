@@ -8,6 +8,6 @@ export interface Movie {
   genres: string[];
   imdbRating: number;
   rottenTomatoesRating: number;
-  category: string;
+  status: string;
   favorite: boolean;
 }

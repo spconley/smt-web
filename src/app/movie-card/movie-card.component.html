@@ -1,12 +1,14 @@
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/41kTVLeW1CL._AC_.jpg" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Avatar (2012)  </h5>
-    <p class="card-text">PG13 / 2h 19min / Action, Sci-Fi, Adventure</p>
-    <p class="card-text">7.9 / 88%</p>
+<div *ngFor="let movie of movies">
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{ movie.imgUrl }}" alt="Card image cap">
     <div class="card-body">
-      <a href="#" class="btn btn-primary card-link">Watched</a>
-      <span class="material-icons card-link">favorite_border</span>
+      <h5 class="card-title">{{ movie.title }} ({{ movie.yearOfRelease }})</h5>
+      <p class="card-text">{{ movie.mpaaRating }} / {{ movie.duration }}min / {{ movie.genres }}</p>
+      <p class="card-text">{{ movie.imdbRating }} / {{ movie.rottenTomatoesRating }}%</p>
+      <div class="card-text">
+        <a href="#" class="btn btn-primary card-link">{{ movie.status }}</a>
+        <span class="material-icons card-link">{{ movie.favorite == true ? 'favorite' : 'favorite_border' }}</span>
+      </div>
     </div>
   </div>
 </div>
